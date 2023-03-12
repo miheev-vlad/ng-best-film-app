@@ -1,0 +1,46 @@
+<section class="films-list">
+  <header class="films-list__title">Популярные фильмы</header>
+  <section class="films-list__serch-panel">
+    <div>
+      <mat-select
+        [(ngModel)]="genreCode"
+        [(value)]="genreCode"
+        class="films-list__serch-panel-select"
+      >
+        <mat-option *ngFor="let genreItem of genre" [value]="genreItem.value">
+          {{ genreItem.name }}
+        </mat-option>
+      </mat-select>
+    </div>
+    <div>
+      <input
+        matInput
+        placeholder="Введие название"
+        [(ngModel)]="filmNameStr"
+        class="films-list__serch-panel-input"
+      />
+    </div>
+  </section>
+  <div class="films-list__cards-container">
+    <app-film-card
+      *ngFor="let filmItem of filmsList | filmsFilter : genreCode : filmNameStr"
+      [filmData]="filmItem"
+      (openDialogEvent)="onOpenDialog($event)"
+      [currentBestFilm]="currentBestFilm"
+      (setBestFilmEvent)="setBestFilm($event)"
+      (removeBestFilmEvent)="removeBestFilm()"
+    ></app-film-card>
+  </div>
+  <section class="films-list__best-film" *ngIf="currentBestFilm">
+    <header class="films-list__best-film-title">Самый лучший фильм</header>
+    <div class="films-list__cards-container">
+      <app-film-card
+        [filmData]="currentBestFilm"
+        (openDialogEvent)="onOpenDialog($event)"
+        [currentBestFilm]="currentBestFilm"
+        (setBestFilmEvent)="setBestFilm($event)"
+        (removeBestFilmEvent)="removeBestFilm()"
+      ></app-film-card>
+    </div>
+  </section>
+</section>

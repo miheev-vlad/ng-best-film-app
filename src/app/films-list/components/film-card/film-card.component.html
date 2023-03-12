@@ -1,0 +1,19 @@
+<mat-card class="film-card" (click)="openDialog()">
+  <img [src]="getImgUrl()" class="film-card__poster" />
+  <mat-card-title class="film-card__name">
+    {{ filmData.name }}
+  </mat-card-title>
+  <mat-card-content>
+    <p class="film-card__genre">
+      {{ getFilmGenre() }}
+    </p>
+    <p class="film-card__year">
+      {{ filmData.year }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions align="end" class="film-card__actions">
+    <button mat-fab class="film-card__like-btn" (click)="onClick($event)">
+      <mat-icon>{{ isFavorite ? "favorite" : "favorite_border" }}</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

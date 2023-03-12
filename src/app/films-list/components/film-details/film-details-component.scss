@@ -1,0 +1,112 @@
+.modal-card {
+  font-family: "Montserrat";
+  border: none;
+  box-shadow: none;
+  padding: 15px 20px;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__poster {
+    width: 150px;
+    height: 225px;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+
+  &__name {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    color: var(--haiti);
+    margin-bottom: 10px;
+  }
+
+  &__genre {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--haiti);
+    margin-bottom: 10px;
+  }
+
+  &__year {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--haiti);
+    margin-bottom: 10px;
+  }
+
+  &__descripton {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--haiti);
+  }
+
+  &__content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__set-best-btn {
+    margin-right: 10px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--cerulean-blue);
+    border: none;
+    background-color: transparent;
+    padding: 11px 8px;
+
+    &:hover {
+      cursor: pointer;
+      background: rgba(63, 81, 181, 0.1);
+      border-radius: 4px;
+    }
+
+    &:focus {
+      border: none;
+    }
+  }
+
+  .best-btn {
+    color: var(--french-rose);
+
+    &:hover {
+      background: rgba(244, 67, 102, 0.1);
+    }
+  }
+
+  &__close-btn {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--french-rose);
+    border: none;
+    background-color: transparent;
+    padding: 11px 8px;
+
+    &:hover {
+      cursor: pointer;
+      background: rgba(244, 67, 102, 0.1);
+      border-radius: 4px;
+    }
+  }
+}
+
+mat-card-actions {
+  margin: 0 !important;
+}
