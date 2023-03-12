@@ -1,0 +1,64 @@
+.films-list {
+  padding: 37px 25px 44px 25px;
+  font-family: "Montserrat";
+
+  &__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    color: var(--black-0);
+    margin-bottom: 14px;
+  }
+
+  &__cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: center;
+  }
+
+  &__best-film-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    color: var(--black-0);
+    margin-bottom: 15px;
+  }
+
+  &__serch-panel {
+    width: 450px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__serch-panel-select {
+    width: 220px;
+    height: 42px;
+    padding: 8px;
+    padding-left: 10px;
+    border: 1px solid lightgray !important;
+    border-radius: 5px;
+    font-family: "Roboto";
+    margin-right: 10px;
+    color: var(--boulder) !important;
+  }
+
+  &__serch-panel-input {
+    width: 220px;
+    height: 42px;
+    padding-left: 10px;
+    border: 1px solid lightgray !important;
+    border-radius: 5px;
+    font-family: "Roboto";
+    color: var(--boulder) !important;
+  }
+}
+
+::ng-deep .mat-select-value-text {
+  color: var(--boulder) !important;
+}

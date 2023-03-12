@@ -1,0 +1,33 @@
+<mat-card class="modal-card">
+  <div class="modal-card__content">
+    <div class="modal-card__content-left">
+      <img [src]="getImgUrl()" class="modal-card__poster" />
+    </div>
+    <div class="modal-card__content-right">
+      <div class="modal-card__content-top">
+        <mat-card-title class="modal-card__name">
+          {{ data.filmData.name }}
+        </mat-card-title>
+        <mat-card-content>
+          <p class="modal-card__genre">{{ getFilmGenre() }}</p>
+          <p class="modal-card__year">{{ data.filmData.year }}</p>
+          <p class="modal-card__descripton">{{ data.filmData.description }}</p>
+        </mat-card-content>
+      </div>
+      <div class="modal-card__content-bottom">
+        <mat-card-actions align="end" class="modal-card__actions">
+          <button
+            class="modal-card__set-best-btn"
+            (click)="onToggleBest()"
+            [class.best-btn]="isBest"
+          >
+            {{isBest ? 'Удалить из лучших фильмов' : 'Выбрать лучшим фильмом'}}
+          </button>
+          <button class="modal-card__close-btn" (click)="onClose()">
+            Закрыть
+          </button>
+        </mat-card-actions>
+      </div>
+    </div>
+  </div>
+</mat-card>

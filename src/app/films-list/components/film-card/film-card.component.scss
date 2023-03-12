@@ -1,0 +1,66 @@
+.film-card {
+  width: 190px;
+  height: 400px;
+  padding: 15px 20px;
+  box-shadow: 0px 0px 15px rgba(29, 24, 56, 0.1);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  position: relative;
+  font-family: "Montserrat";
+  margin-right: 15px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__poster {
+    width: 150px;
+    height: 225px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--haiti);
+    margin-bottom: 10px;
+  }
+
+  &__genre {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--haiti);
+    margin-bottom: 10px;
+  }
+
+  &__year {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--haiti);
+  }
+
+  &__actions {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+  }
+
+  &__like-btn {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    padding: 14px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+  }
+}
